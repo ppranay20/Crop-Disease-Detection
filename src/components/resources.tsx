@@ -23,7 +23,7 @@ export function Resources() {
       (selectedCategory === 'All' || resource.category === selectedCategory)
   )
 
-  const categories = ['All', ...new Set(resources.map((r) => r.category))]
+  const categories = ['All', ...Array.from(new Set(resources.map((r) => r.category)))]
 
   return (
     <Layout>
